@@ -1,0 +1,21 @@
+<h2><a href="https://codeforces.com/contest/2071/problem/A" target="_blank" rel="noopener noreferrer">2071A — The Play Never Ends</a></h2>
+
+| | |
+|---|---|
+| **Difficulty** | 800 |
+| **Language** | Rust 2021 |
+| **Verdict** | ✅ Accepted |
+| **Problem Link** | [Codeforces 2071A](https://codeforces.com/contest/2071/problem/A) |
+
+## Topics
+`math` `number theory`
+
+---
+
+## Problem Statement
+
+<div class="header"><div class="title">A. The Play Never Ends</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file input-standard"><div class="property-title">input</div>standard input</div><div class="output-file output-standard"><div class="property-title">output</div>standard output</div></div><div><p>Let's introduce a two-player game, table tennis, where a winner is always decided and draws are impossible.</p><p>Three players, Sosai, Fofo, and Hohai, want to spend the rest of their lives playing table tennis. They decided to play forever in the following way:</p><ul> <li> In each match, two players compete while the third spectates.<p> </p></li><li> To ensure fairness, no player can play three times in a row. The player who plays twice in a row must sit out as a spectator in the next match, which will be played by the other two players. Otherwise, the winner and the spectator will play in the next match, while the loser will spectate. </li></ul><p>Now, the players, fully immersed in this infinite loop of matches, have tasked you with solving the following problem:</p><p>Given an integer $$$k$$$, determine whether the spectator of the first match can be the spectator in the $$$k$$$-th match.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \le t \le 1000$$$). The description of the test cases follows. </p><p>The only line of each test case contains one integer $$$k$$$ ($$$1 \le k \le 10^9$$$).</p></div><div class="output-specification"><div class="section-title">Output</div><p>For each test case, print <span class="tex-font-style-tt">"YES"</span> (without quotes) if the spectator of the first match can be the spectator of the $$$k$$$-th match, and <span class="tex-font-style-tt">"NO"</span> (without quotes) otherwise.</p><p>You can output the answer in any case (upper or lower). For example, the strings <span class="tex-font-style-tt">"yEs"</span>, <span class="tex-font-style-tt">"yes"</span>, <span class="tex-font-style-tt">"Yes"</span>, and <span class="tex-font-style-tt">"YES"</span> will be recognized as positive responses.</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id003310751360780011" id="id0050501554485368" class="input-output-copier">Copy</div></div><pre id="id003310751360780011"><div class="test-example-line test-example-line-even test-example-line-0">4</div><div class="test-example-line test-example-line-odd test-example-line-1">1</div><div class="test-example-line test-example-line-even test-example-line-2">2</div><div class="test-example-line test-example-line-odd test-example-line-3">333</div><div class="test-example-line test-example-line-even test-example-line-4">1000000000</div></pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id006465464437610101" id="id007058796406008404" class="input-output-copier">Copy</div></div><pre id="id006465464437610101">YES
+NO
+NO
+YES
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><p>In the first test case, the spectator of the first match is already a spectator in the $$$1$$$st match.</p><p>In the second test case, the spectator of the first match will play in the $$$2$$$nd match regardless of the result of the first match.</p></div>
