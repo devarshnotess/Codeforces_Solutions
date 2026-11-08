@@ -1,0 +1,21 @@
+<h2><a href="https://codeforces.com/contest/2104/problem/A" target="_blank" rel="noopener noreferrer">2104A — Three Decks</a></h2>
+
+| | |
+|---|---|
+| **Difficulty** | 800 |
+| **Language** | Rust 2021 |
+| **Verdict** | ✅ Accepted |
+| **Problem Link** | [Codeforces 2104A](https://codeforces.com/contest/2104/problem/A) |
+
+## Topics
+`math`
+
+---
+
+## Problem Statement
+
+<div class="header"><div class="title">A. Three Decks</div><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>512 megabytes</div><div class="input-file input-standard"><div class="property-title">input</div>standard input</div><div class="output-file output-standard"><div class="property-title">output</div>standard output</div></div><div><p>Monocarp placed three decks of cards in a row on the table. The first deck consists of $$$a$$$ cards, the second deck consists of $$$b$$$ cards, and the third deck consists of $$$c$$$ cards, with the condition $$$a  \lt  b  \lt  c$$$.</p><p>Monocarp wants to take some number of cards (at least one, but no more than $$$c$$$) from the <span class="tex-font-style-bf">third</span> deck and distribute them between the first two decks so that each of the taken cards ends up in either the first or the second deck. It is possible that all the cards taken from the third deck will go into the same deck.</p><p>Your task is to determine whether Monocarp can make the number of cards in all three decks equal using the described operation.</p></div><div class="input-specification"><div class="section-title">Input</div><p>The first line contains a single integer $$$t$$$ ($$$1 \le t \le 10^4$$$) — the number of test cases.</p><p>The only line of each test case contains three integers $$$a, b$$$, and $$$c$$$ ($$$1 \le a, b, c \le 10^8$$$) — the number of cards in the first, second, and third decks, respectively.</p><p>Additional constraint on the input: $$$a  \lt  b  \lt  c$$$.</p></div><div class="output-specification"><div class="section-title">Output</div><p>For each test case, output "<span class="tex-font-style-tt">YES</span>" (without quotes) if Monocarp can make the number of cards in all three decks equal using the described operation. Otherwise, output "<span class="tex-font-style-tt">NO</span>" (without quotes).</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id008465282492088139" id="id009954612451705627" class="input-output-copier">Copy</div></div><pre id="id008465282492088139"><div class="test-example-line test-example-line-even test-example-line-0">4</div><div class="test-example-line test-example-line-odd test-example-line-1">3 5 10</div><div class="test-example-line test-example-line-even test-example-line-2">12 20 30</div><div class="test-example-line test-example-line-odd test-example-line-3">3 5 7</div><div class="test-example-line test-example-line-even test-example-line-4">1 5 6</div></pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id0049752512342036626" id="id0032544507757737595" class="input-output-copier">Copy</div></div><pre id="id0049752512342036626">YES
+NO
+YES
+NO
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><p>In the first test case, Monocarp has to take $$$4$$$ cards from the third deck, put $$$3$$$ cards in the first deck, and $$$1$$$ card in the second deck. Thus, there will be $$$6$$$ cards in all three decks.</p><p>In the second test case, it is impossible to make the number of cards in all three decks equal.</p><p>In the third test case, Monocarp has to take $$$2$$$ cards from the third deck and put both in the first deck. Thus, there will be $$$5$$$ cards in all three decks.</p><p>In the fourth test case, it is also impossible to make the number of cards in all three decks equal.</p></div>
