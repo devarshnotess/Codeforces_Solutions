@@ -1,0 +1,23 @@
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+ 
+let input = '';
+process.stdin.on('data', function(chunk) {
+  input += chunk;
+});
+process.stdin.on('end', function() {
+  const lines = input.trim().split('
+');
+  const t = parseInt(lines[0], 10);
+  let idx = 1;
+  for (let i = 0; i < t; i++) {
+    const s = lines[idx++].trim();
+    let countOnes = 0;
+    for (let char of s) {
+      if (char === '1') {
+        countOnes++;
+      }
+    }
+    console.log(countOnes);
+  }
+});
