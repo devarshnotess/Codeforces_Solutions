@@ -1,0 +1,63 @@
+"use strict";
+ 
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+ 
+let input_data = "";
+ 
+process.stdin.on("data", (chunk) => {
+    input_data += chunk;
+});
+ 
+process.stdin.on("end", () => {
+    let lines = input_data.trim().split("
+");
+    let t = parseInt(lines[0], 10);  // number of test cases
+    let idx = 1;                     // pointer to current line in input
+    let results = [];
+ 
+    for (let _ = 0; _ < t; _++) {
+        // Read n and m
+        let [n, m] = lines[idx].split(" ").map(Number);
+        idx++;
+ 
+        // Read the matrix
+        let matrix = lines.slice(idx, idx + n);
+        idx += n;
+ 
+        // Count how many rows have odd parity
+        let oddRows = 0;
+        for (let row of matrix) {
+            let countOnes = 0;
+            for (let ch of row) {
+                if (ch === '1') {
+                    countOnes++;
+                }
+            }
+            if (countOnes % 2 === 1) {
+                oddRows++;
+            }
+        }
+ 
+        // Count how many columns have odd parity
+        let oddCols = 0;
+        for (let col = 0; col < m; col++) {
+            let countOnes = 0;
+            for (let i = 0; i < n; i++) {
+                if (matrix[i][col] === '1') {
+                    countOnes++;
+                }
+            }
+            if (countOnes % 2 === 1) {
+                oddCols++;
+            }
+        }
+ 
+        // The answer for each test case is the max of these two
+        results.push(Math.max(oddRows, oddCols));
+    }
+ 
+    // Print results for all test cases
+    console.log(results.join("
+"));
+});
